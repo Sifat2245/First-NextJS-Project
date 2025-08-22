@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-blue-800 text-white px-6 py-3 shadow-md">
+    <nav className="bg-blue-900 text-white px-6 py-3 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-xl font-bold">MySite</div>
@@ -12,6 +12,7 @@ const Navbar = () => {
           <li className="hover:text-gray-200 cursor-pointer">Home</li>
           <li className="hover:text-gray-200 cursor-pointer">About</li>
           <li className="hover:text-gray-200 cursor-pointer">Services</li>
+          <li className="hover:text-gray-200 cursor-pointer">Login</li>
         </ul>
       </div>
     </nav>
