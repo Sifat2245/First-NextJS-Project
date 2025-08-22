@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
 
 const Navbar = () => {
-    return (
-        <nav>
-        <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>services</li>
+  return (
+    <nav className="bg-blue-800 text-white px-6 py-3 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-xl font-bold">MySite</div>
+
+        {/* Links */}
+        <ul className="flex space-x-6">
+          <li className="hover:text-gray-200 cursor-pointer">Home</li>
+          <li className="hover:text-gray-200 cursor-pointer">About</li>
+          <li className="hover:text-gray-200 cursor-pointer">Services</li>
         </ul>
-        </nav>
-    );
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
