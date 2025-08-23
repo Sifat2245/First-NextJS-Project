@@ -1,5 +1,6 @@
 import React from "react";
 import { LayoutDashboard, Package, Settings, LogOut } from "lucide-react";
+import Link from "next/link";
 
 const DashboardLayout = ({ children }) => {
   return (
@@ -14,12 +15,12 @@ const DashboardLayout = ({ children }) => {
           >
             <LayoutDashboard size={20} /> Dashboard
           </a>
-          <a
-            href="add-product"
+          <Link
+            href="/user-dashboard/add-product"
             className="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 text-gray-700"
           >
             <Package size={20} /> Add Product
-          </a>
+          </Link>
           <a
             href="#"
             className="flex items-center gap-2 p-2 rounded-lg hover:bg-blue-50 text-gray-700"
@@ -27,7 +28,8 @@ const DashboardLayout = ({ children }) => {
             <Settings size={20} /> Settings
           </a>
         </nav>
-        <button className="flex items-center gap-2 p-2 rounded-lg hover:bg-red-50 text-red-600">
+
+        <button className="flex items-center gap-2 p-2 rounded-lg hover:bg-red-50 text-red-600 mt-6">
           <LogOut size={20} /> Logout
         </button>
       </aside>
@@ -38,6 +40,11 @@ const DashboardLayout = ({ children }) => {
         <header className="bg-white shadow p-4 flex justify-between items-center">
           <h1 className="text-xl font-semibold text-gray-800">Dashboard</h1>
           <div className="flex items-center gap-3">
+            <Link href={"/"}>
+              <span className="p-3 bg-blue-900 text-white rounded-md">
+                Back Home
+              </span>
+            </Link>
             <span className="text-gray-600">Hello, Saifuddin</span>
             <img
               src="https://i.pravatar.cc/40"

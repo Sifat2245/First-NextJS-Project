@@ -1,4 +1,5 @@
 "use client";
+import { BASE_API_URL } from "@/utils/constants";
 import axios from "axios";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
@@ -28,7 +29,7 @@ const AddProductPage = () => {
     setMessage("");
 
     try {
-      const res = await axios.post("/api/products", product);
+      const res = await axios.post(`${BASE_API_URL}/api/products`, product);
       Swal.fire("Success!", "Product added successfully!", "success");
       setProduct({
         name: "",

@@ -1,45 +1,45 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 const Navbar = () => {
-  const pathName = usePathname()
-  console.log(pathName, pathName.includes('dashboard'));
-  if(!pathName.includes('dashboard')){
-      return (
-    <nav className="bg-blue-900 text-white px-6 py-3 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-xl font-bold">MySite</div>
+  const pathName = usePathname();
+  console.log(pathName, pathName.includes("dashboard"));
+  if (!pathName.includes("dashboard")) {
+    return (
+      <nav className="bg-blue-900 text-white px-6 py-3 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo */}
+          <div className="text-xl font-bold">MySite</div>
 
-        {/* Links */}
-        <ul className="flex space-x-6">
-          <Link href={"/"}>
-            <li className="hover:text-gray-200 cursor-pointer">Home</li>
-          </Link>
-          <Link href={"/about-us"}>
-            <li className="hover:text-gray-200 cursor-pointer">About</li>
-          </Link>
-          <Link href={'/services'}>
-            <li className="hover:text-gray-200 cursor-pointer">Services</li>
-          </Link>
-          <Link href={'/posts'}>
-            <li className="hover:text-gray-200 cursor-pointer">Posts</li>
-          </Link>
-          <Link href={'/user-dashboard'}>
-            <li className="hover:text-gray-200 cursor-pointer">Dashboard</li>
-          </Link>
-          <li className="hover:text-gray-200 cursor-pointer">Login</li>
-        </ul>
-      </div>
-    </nav>
-  );
+          {/* Links */}
+          <ul className="flex space-x-6">
+            <Link href={"/"}>
+              <li className="hover:text-gray-200 cursor-pointer">Home</li>
+            </Link>
+            <Link href={"/about-us"}>
+              <li className="hover:text-gray-200 cursor-pointer">About</li>
+            </Link>
+            <Link href={"/services"}>
+              <li className="hover:text-gray-200 cursor-pointer">Services</li>
+            </Link>
+            <Link href={"/posts"}>
+              <li className="hover:text-gray-200 cursor-pointer">Posts</li>
+            </Link>
+            <Link href={"/user-dashboard"}>
+              <li className="hover:text-gray-200 cursor-pointer">Dashboard</li>
+            </Link>
+            <Link href={'/login'}>
+              <li className="hover:text-gray-200 cursor-pointer">Login</li>
+            </Link>
+          </ul>
+        </div>
+      </nav>
+    );
+  } else {
+    return <></>;
   }
-  else{
-    return <></>
-  }
-
 };
 
 export default Navbar;
