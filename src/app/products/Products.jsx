@@ -44,7 +44,7 @@ const Products = () => {
                 <img
                   src={product.image || "https://via.placeholder.com/300"}
                   alt={product.name}
-                  className="w-full h-52 object-cover rounded-xl transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-110"
                 />
               </div>
               <h2 className="text-xl font-semibold mt-4">{product.name}</h2>
